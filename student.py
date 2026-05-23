@@ -37,7 +37,13 @@ print(n)
 
 print("Accuracy Score : ",accuracy_score(y_test,n))
 
-o = SVC()
-p = o.fit(X_train,y_train)
-q = p.predict(X_test)
-print("Accuracy Score : ",accuracy_score(q))
+# o = SVC()
+# p = o.fit(X_train,y_train)
+# q = p.predict(X_test)
+# print("Accuracy Score : ",accuracy_score(y_test,q))
+
+k = KNeighborsClassifier(n_neighbors=5)
+
+r = k.fit(X_train,y_train)
+s = r.predict(X_test)
+print("Accuracy Score : ",accuracy_score(y_test,s))
